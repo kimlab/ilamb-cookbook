@@ -173,18 +173,12 @@ Run the study using the ilamb-run script. Executing the command in your director
 $ ilamb-run --config cmip5_hist.cfg --model_root $ILAMB_ROOT/MODELS/ --regions global
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/ILAMB-Cookbook0.png "image_tooltip")
 
 
 **<span style="text-decoration:underline;">How ILAMB experiment looks like</span>**
 
 This script generates a new directory of results called "_build" in your directory.To browse the results, open the _build/index.html file in any browser and you will see a webpage with a summary image in the center.
-
-The sample result can be reached here(ID: common, PW: suimongaku):
 
 http://hydro.iis.u-tokyo.ac.jp/~doi/ILAMB/HowToRun/_build/
 
@@ -261,16 +255,7 @@ As a result, monthly value evaluation will be conducted.
 ILAMB can combine multiple variables into one as post-processing. In order to use this function, "derived" option should be set in configure file as follows.(The following shows an example of evaluating the sum of two variables: "snw" and "mrso".
 
 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook1.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/ILAMB-Cookbook1.png "image_tooltip")
-
-
- \
- \
-
 
 
 ## 2. How to use a custom confrontation (ConfKDEPSS)
@@ -311,10 +296,6 @@ We use "ctype" to select which Confrontation to apply. Here we set this to "Conf
 If ctype is not given, ILAMB uses the base class of Confrontation by default.
 
 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook2.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/ILAMB-Cookbook2.png "image_tooltip")
 
 
@@ -353,24 +334,14 @@ $ cd /home/{username}/lib/python2.7/site-packages/ILAMB/
 
 <p style="text-align: right">
 
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook3.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 <img src="images/ILAMB-Cookbook3.png" width="" alt="alt_text" title="image_tooltip">
 </p>
-
-
 
 
 1.  Add " "ConfKDEPSS": ConfKDEPSS " around line 185 in Scoreboard.py as follows.
 
 <p style="text-align: right">
 	
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook4.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 <img src="images/ILAMB-Cookbook4.png" width="" alt="alt_text" title="image_tooltip">
 </p>
 
@@ -425,12 +396,7 @@ Then, model result is extracted.
 Finally, stageData make the observational and model data comparable.
 
 
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook5.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/ILAMB-Cookbook5.png "image_tooltip")
-
 
 
 
@@ -441,10 +407,6 @@ Confrontation class has confront method. This method passes the required set of 
 First, the observational and model dataset are prepared using stageData method.
 
 Then, the set of data will be passed to ilamblib.AnalysisMeanState function.
-
-
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook6.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/ILAMB-Cookbook6.png "image_tooltip")
@@ -496,10 +458,6 @@ We use class inheritance from Confrontation. We define i) the additional pre-pro
 When the customized class is defined, we use inheritance from Confrontation class. In the example below, we also changed the weight of scores in __init__ method; the weight for "RMSE Score" is commented out, and "Perkins' Skill Score" is added.
 
 
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook7.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/ILAMB-Cookbook7.png "image_tooltip")
 
 
@@ -516,20 +474,12 @@ In customized confrontation, we define most of the evaluation procedures in conf
 In this example, we added Perkins' Skill Score calculation around line 105. (Here the pss_map variable is also a ILAMB.Variable instance.)
 
 
-
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook8.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/ILAMB-Cookbook8.png "image_tooltip")
 
 
 <span style="text-decoration:underline;">Note</span>
 
 The result is dumped to netCDF4 file, based on out_vars list.(around line 180) Here the elements of out_vars list are Python dictionaries(key: region such as 'global', value: ILAMB.Variable instance).
-
-
-
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook9.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/ILAMB-Cookbook9.png "image_tooltip")
@@ -572,10 +522,6 @@ This time we are going to mainly change stageData, and use the standard MeanStat
 We added a new method, runTRIPy, to manage the Input/Output between ILAMB and TRIPy. This method passes the model dataset extracted by ILAMB to TRIPy and executes TRIPy calculation.
 
 
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook10.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/ILAMB-Cookbook10.png "image_tooltip")
 
 
@@ -588,18 +534,10 @@ We added a new method, runTRIPy, to manage the Input/Output between ILAMB and TR
 First, the observational dataset (station data) with the shape of (time, station) is extracted and stored in ILAMB.Variable instance.
 
 
-
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook11.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/ILAMB-Cookbook11.png "image_tooltip")
 
 
 Secondly, the model result (spatial data) with the shape of (time, latitude, longitude) is extracted and stored in ILAMB.Variable instance.
-
-
-
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook12.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/ILAMB-Cookbook12.png "image_tooltip")
@@ -608,18 +546,10 @@ Secondly, the model result (spatial data) with the shape of (time, latitude, lon
 Thirdly, the model result (global runoff map data) is passed to TRIPy, and TRIPy returns the same shape of discharge data.
 
 
-
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook13.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/ILAMB-Cookbook13.png "image_tooltip")
 
 
 Then, the model result which matches the location of observational station data is extracted.
-
-
-
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ILAMB-Cookbook14.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/ILAMB-Cookbook14.png "image_tooltip")
