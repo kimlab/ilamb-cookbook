@@ -1,60 +1,14 @@
-<!----- Conversion time: 8.892 seconds.
-
-
-Using this Markdown file:
-
-1. Cut and paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* gd2md-html version 1.0β10
-* Fri Mar 23 2018 15:34:16 GMT-0700 (PDT)
-* Source doc: https://docs.google.com/open?id=1oX8M6s36UHkJigue_DWzfjdvIDfwDTyIqjs5H-mwSQg
-* This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server.
-
-WARNING:
-You have 5 H1 headings. You may want to use the "H1 -> H2" option to demote all headings by one level.
-
------>
-
-
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 1; ALERTS: 15.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-<a href="#gdcalert3">alert3</a>
-<a href="#gdcalert4">alert4</a>
-<a href="#gdcalert5">alert5</a>
-<a href="#gdcalert6">alert6</a>
-<a href="#gdcalert7">alert7</a>
-<a href="#gdcalert8">alert8</a>
-<a href="#gdcalert9">alert9</a>
-<a href="#gdcalert10">alert10</a>
-<a href="#gdcalert11">alert11</a>
-<a href="#gdcalert12">alert12</a>
-<a href="#gdcalert13">alert13</a>
-<a href="#gdcalert14">alert14</a>
-<a href="#gdcalert15">alert15</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
-
-
-# ILAMB Cookbook (ILAMB ver 2.2)
+## ILAMB Cookbook (ILAMB ver 2.2)
 
 <p style="text-align: right">
 2018-03-12	Ryotaro Doi and Hyungjun Kim</p>
 
 
 
-# 0. Installation
+## 0. Installation
 
 
-## (0) Built your own Python environment (Optional)
+### (0) Built your own Python environment (Optional)
 
 - Copy Miniconda to your directory by the following command.
 
@@ -99,7 +53,7 @@ $ source deactivate
 
 
 
-## (1) Install ILAMB
+### (1) Install ILAMB
 
 (Activate your own python environment before installation if you use your own environment)
 
@@ -160,7 +114,7 @@ $ unzip /home/{username}/lib/python2.7/site-packages/ILAMB-2.2-py2.7.egg
 
 
 
-# 1. How to run ILAMB
+## 1. How to run ILAMB
 
 (Activate your own python environment before running ILAMB, if needed)
 
@@ -177,7 +131,7 @@ Model Data:		tas from MIROC5 and CanESM2
 The only steps we need are:
 
 
-## (1) Prepare the configure file and sample data
+### (1) Prepare the configure file and sample data
 
 Copy the configure file, "cmip5_hist.cfg" in "/work/a01/doi/pub/1_HowToRun/", as well as DATA/ and MODELS/ directory to your directory. (ex. /work/a01/doi/ILAMB/HowToRun) 
 
@@ -194,7 +148,7 @@ $ cp -r ./DATA/ /work/a01/doi/ILAMB/HowToRun
 $ cp -r ./MODELS/ /work/a01/doi/ILAMB/HowToRun
 
 
-## (2) Set ILAMB_ROOT
+### (2) Set ILAMB_ROOT
 
 move to your new directory (as the example below)
 
@@ -209,10 +163,10 @@ $ export ILAMB_ROOT=/work/a01/doi/ILAMB/HowToRun
 (ILAMB_ROOT can also be defined in .bash_profile if you run the ILAMB experiment several times in the same directory)
 
 
-## 
+### 
 
 
-## (3) Run the model evaluation
+### (3) Run the model evaluation
 
 Run the study using the ilamb-run script. Executing the command in your directory:
 
@@ -319,7 +273,7 @@ ILAMB can combine multiple variables into one as post-processing. In order to us
 
 
 
-# 2. How to use a custom confrontation (ConfKDEPSS)
+## 2. How to use a custom confrontation (ConfKDEPSS)
 
 In the ILAMB terminology, a confrontation is to stage an observational benchmark dataset and its reference analysis. The Confrontation base class performs the mean-state comparison by default. However, ILAMB also supports confrontation classes which derive from the base class in case that users want to write their own comparison, or to have benchmark datasets to be compared to a non-algebraic combination of model results.
 
@@ -344,7 +298,7 @@ Model Data:		pr from MIROC5 and CanESM2
 
 
 
-## (1) Prepare the configure file and sample data
+### (1) Prepare the configure file and sample data
 
 Copy the configure file, "cmip5_hist_customConf.cfg" in "/work/a01/doi/pub/2_ConfCustom/", as well as DATA/ and MODELS/ directory to your directory. 
 
@@ -371,7 +325,7 @@ Since ctype is defined for each h2 level tag inside .cfg file, it is possible to
 
 
 
-## (2) Set Customized Confrontation
+### (2) Set Customized Confrontation
 
 (Source directory has to be unzipped in advance. Look at  "0.Installation" section.)
 
@@ -426,7 +380,7 @@ Save and close Scoreboard.py.
 
 
 
-## (3) Run the model evaluation
+### (3) Run the model evaluation
 
 !!This experiment takes about 5 hours!!
 
@@ -449,12 +403,12 @@ $ ilamb-run --config cmip5_hist_customConf.cfg --model_root $ILAMB_ROOT/MODELS/ 
 
 
 
-# 3. How to make a custom confrontation(ConfKDEPSS)
+## 3. How to make a custom confrontation(ConfKDEPSS)
 
 In this section, we are going to look at how we can make our custom Confrontation class. As an example, we will make ConfKDEPSS class, which replaces RMSE scoring metric with Perkins' Skill Score metric.
 
 
-## (1) How the Confrontation works
+### (1) How the Confrontation works
 
 Before we make our own custom Confrontation, we look at how the default Confrontation class works.
 
@@ -523,7 +477,7 @@ For examle, bias calculation in AnalysisMeanState function (around line 918) is 
 
 
 
-## (2) Make a custom confrontation
+### (2) Make a custom confrontation
 
 Here we are going to look at how to make our own customized confrontation.
 
@@ -588,7 +542,7 @@ When we use a customized confrontation, we need to define "ctype" in configurati
 
 
 
-# 4. How to use other models for pre-processing(ConfTRIP)
+## 4. How to use other models for pre-processing(ConfTRIP)
 
 In this section, we are going to show an example of external model reference.
 
@@ -605,15 +559,15 @@ Many GCMs have runoff outputs but they don't have discharge outputs in most case
 See	/work/a01/doi/pub/4_ConfTRIPy/codes/ConfTRIPy.py
 
 
-## (1) Basic concept
+### (1) Basic concept
 
 This time we are going to mainly change stageData, and use the standard MeanStateAnalysis function for the evaluation procedure.
 
 
-## 
+### 
 
 
-## (2) runTRIPy method
+### (2) runTRIPy method
 
 We added a new method, runTRIPy, to manage the Input/Output between ILAMB and TRIPy. This method passes the model dataset extracted by ILAMB to TRIPy and executes TRIPy calculation.
 
@@ -626,10 +580,10 @@ We added a new method, runTRIPy, to manage the Input/Output between ILAMB and TR
 
 
 
-## 
+### 
 
 
-## (3) stageData method
+### (3) stageData method
 
 First, the observational dataset (station data) with the shape of (time, station) is extracted and stored in ILAMB.Variable instance.
 
@@ -687,3 +641,4 @@ When you use ConfTRIPy, you need to:
 1.  set PATH to the TRIPy source code directory
 
 		(If TRIPy doesn't work, try "$source /home/hjkim/.bash_profile")
+
